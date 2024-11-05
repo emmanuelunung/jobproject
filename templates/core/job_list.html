@@ -1,0 +1,6 @@
+<h2>Job Listings</h2>
+<ul>
+    {% for job in jobs %}
+        <li>{{ job.title }} at {{ job.company }} - {{ job.location }} <a href="{% url 'apply' job.id %}">Apply</a></li>
+    {% endfor %}
+</ul>
